@@ -1,0 +1,35 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "apple.arreferenceimage"
+    },
+    {
+      "filename" : "Board.arreferenceimage"
+    },
+    {
+      "filename" : "Board🇫🇷.arreferenceimage"
+    },
+    {
+      "filename" : "Fenetre.arreferenceimage"
+    },
+    {
+      "filename" : "Grand ffiche.arreferenceimage"
+    },
+    {
+      "filename" : "Image from iOS (6).arreferenceimage"
+    },
+    {
+      "filename" : "Image from iOS (7).arreferenceimage"
+    },
+    {
+      "filename" : "Mac 🌵.arreferenceimage"
+    },
+    {
+      "filename" : "WorldCupTab.arreferenceimage"
+    }
+  ]
+}
