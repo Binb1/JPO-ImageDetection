@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/Binb1/Polyword/master/Ressources/Polyword.png" alt="Polyword" width="200"></a>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/JPO-ImageDetection.png" alt="Polyword" width="200"></a>
   <br><br>
   ImageDetection-JPO
   <br><br>
@@ -16,8 +16,7 @@ This project is realized in the context of the creation of a wider application i
 The final project is to realize and interactive application in the context of visiting the EPITA Engineering School in Paris.
 
 ## Team
-<img src="https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/3IE.png" alt="Polyword" width="100">
-[3IE](https://raw.githubusercontent.com/Binb1/Polyword/master/Ressources/core-ml-icon.png): The project is realized at 3IE, the Institute of IT Innovation of Epita.
+<img src="https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/3IE.png" alt="3IE" width="100"> [3IE](https://www.3ie.fr): The project is realized at 3IE, the Institute of IT Innovation of Epita.
 
 
 
