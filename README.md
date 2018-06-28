@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/JPO-ImageDetection.png" alt="Polyword" width="200"></a>
+  <a ><img src="https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/JPO-ImageDetection.png" alt="Polyword" width="200"></a>
   <br><br>
   ImageDetection-JPO
   <br><br>
