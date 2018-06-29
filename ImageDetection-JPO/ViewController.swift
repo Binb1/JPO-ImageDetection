@@ -84,7 +84,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             planeNode.opacity = 1
             planeNode.eulerAngles.x = -.pi / 2
             
-            
+    
             node.addChildNode(planeNode)
         }
     }

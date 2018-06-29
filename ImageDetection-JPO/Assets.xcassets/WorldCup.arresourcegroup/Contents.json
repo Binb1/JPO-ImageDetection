@@ -5,13 +5,22 @@
   },
   "resources" : [
     {
+      "filename" : "Amphi premium.arreferenceimage"
+    },
+    {
       "filename" : "apple.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment x.arreferenceimage"
     },
     {
       "filename" : "Board.arreferenceimage"
     },
     {
       "filename" : "Board🇫🇷.arreferenceimage"
+    },
+    {
+      "filename" : "caffet.arreferenceimage"
     },
     {
       "filename" : "Fenetre.arreferenceimage"
@@ -27,6 +36,9 @@
     },
     {
       "filename" : "Mac 🌵.arreferenceimage"
+    },
+    {
+      "filename" : "under.arreferenceimage"
     },
     {
       "filename" : "WorldCupTab.arreferenceimage"
