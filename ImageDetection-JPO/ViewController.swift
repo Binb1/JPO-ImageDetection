@@ -11,7 +11,7 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
+    
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     
@@ -30,8 +30,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        configureTracking(ressourceFolder: "WorldCup")
+        
+        configureTracking(ressourceFolder: Constants.ARReference.folderName)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -62,30 +62,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             //Initialize an SKScene to add 2D text to the SCScene
             var skScene: SKScene!
+            //Triple check to see if the SKScene and the node can be created
             if let name = ref.name {
                 if let dicoDescr = self.imgDictionnary.dictionnary[name] {
-                    skScene = self.nodeHandler.createSceneWithLabel(text: dicoDescr)
-                } else {
-                    skScene = self.nodeHandler.createSceneWithLabel(text: "Not recognised image")
+                    if !self.nodeHandler.onScreenNodes.contains(dicoDescr) {
+                        //Creation of the SKScene, the SKLabelNode and the SCNPlane
+                        skScene = self.nodeHandler.createSceneWithLabel(text: dicoDescr)
+                        
+                        //Create a plane on top of the detected image
+                        let plane = SCNPlane(width: ref.physicalSize.width,
+                                             height: ref.physicalSize.height)
+                        let material = SCNMaterial()
+                        material.lightingModel = SCNMaterial.LightingModel.constant
+                        material.isDoubleSided = false
+                        material.diffuse.contents = skScene
+                        plane.materials = [material]
+                        let planeNode = SCNNode(geometry: plane)
+                        planeNode.opacity = 1
+                        planeNode.eulerAngles.x = -.pi / 2
+
+                        node.addChildNode(planeNode)
+                    }
                 }
-            } else {
-                skScene = self.nodeHandler.createSceneWithLabel(text: "Not recognised image")
             }
-            
-            //Create a plane on top of the detected image
-            let plane = SCNPlane(width: ref.physicalSize.width,
-                                 height: ref.physicalSize.height)
-            let material = SCNMaterial()
-            material.lightingModel = SCNMaterial.LightingModel.constant
-            material.isDoubleSided = false
-            material.diffuse.contents = skScene
-            plane.materials = [material]
-            let planeNode = SCNNode(geometry: plane)
-            planeNode.opacity = 1
-            planeNode.eulerAngles.x = -.pi / 2
-            
-    
-            node.addChildNode(planeNode)
         }
     }
 }
