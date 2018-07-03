@@ -11,8 +11,10 @@ import ARKit
 
 class NodeHandler {
     
-    init() {
+    var onScreenNodes : [String]
     
+    init() {
+        onScreenNodes = []
     }
     
     func createSceneWithLabel(text: String) -> SKScene {
@@ -29,6 +31,7 @@ class NodeHandler {
     }
     
     func createLabelNode(position: CGPoint, text: String) -> SKLabelNode {
+        //Creating the SKLabelNode
         let label = SKLabelNode(fontNamed:"Menlo-Bold")
         label.fontSize = 60
         label.horizontalAlignmentMode = .left
@@ -42,6 +45,10 @@ class NodeHandler {
         label.position = CGPoint(x: position.x - CGFloat(diff), y: position.y)
         label.zRotation = .pi
         label.xScale *= -1
+        
+        //Adding the node to the array of nodes
+        onScreenNodes.append(text)
+        
         return label
     }
 }
