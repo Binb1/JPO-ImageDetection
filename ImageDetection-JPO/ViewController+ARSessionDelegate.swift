@@ -23,6 +23,6 @@ extension ViewController : ARSessionDelegate {
     
     func sessionInterruptionEnded(_ session: ARSession) {
         debugPrint("Restarting session")
-        configureTracking(ressourceFolder: "WorldCup")
+        configureTracking(ressourceFolder: Constants.ARReference.folderName)
     }
 }
