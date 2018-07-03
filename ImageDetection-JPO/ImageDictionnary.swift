@@ -15,7 +15,7 @@ class ImageDictionnary {
     
     init() {
         dictionnary = [String: String]()
-        getElements(ressourceFolder: "WorldCup")
+        getElements(ressourceFolder: Constants.ARReference.folderName)
     }
     
     func getElements(ressourceFolder: String) {
@@ -25,8 +25,20 @@ class ImageDictionnary {
         
         for im in referenceImages {
             if let name = im.name {
-                dictionnary[name] = name
+                dictionnary[name] = configDisplayName(xcodeName: name)
             }
+        }
+    }
+    
+    func configDisplayName(xcodeName: String) -> String {
+        if xcodeName.lowercased().range(of:"under") != nil {
+            return "Under"
+        } else if xcodeName.lowercased().range(of:"amphi4") != nil {
+            return "Amphi 4"
+        } else if xcodeName.lowercased().range(of:"worldcup") != nil {
+            return "🇫🇷🏆"
+        } else {
+            return xcodeName
         }
     }
     
