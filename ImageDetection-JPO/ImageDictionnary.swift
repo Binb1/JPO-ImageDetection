@@ -41,5 +41,4 @@ class ImageDictionnary {
             return xcodeName
         }
     }
-    
 }
