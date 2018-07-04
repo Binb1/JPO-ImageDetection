@@ -6,6 +6,8 @@
 //  Copyright © 2018 Robin Champsaur. All rights reserved.
 //
 
+//TODO - Fix the zposition of the plane on very big images
+
 import UIKit
 import SceneKit
 import ARKit
@@ -67,8 +69,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 if let dicoDescr = self.imgDictionnary.dictionnary[name] {
                     if !self.nodeHandler.onScreenNodes.contains(dicoDescr) {
                         //Creation of the SKScene, the SKLabelNode and the SCNPlane
-//                        skScene = self.nodeHandler.createSceneWithLabel(text: dicoDescr)
-                        skScene = self.nodeHandler.createSceneWithNodeAndLabel(text: dicoDescr, imageName: "logo-epita.png")
+                        skScene = self.createScene(dicoDescr: dicoDescr)
                         
                         //Create a plane on top of the detected image
                         let plane = SCNPlane(width: ref.physicalSize.width,
@@ -87,5 +88,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 }
             }
         }
+    }
+    
+    // Function that will call the NodeHandler function to create the perfect scene
+    // depending on the image recognised
+    func createScene(dicoDescr: String) -> SKScene {
+        if checkAddImage(dicoDescr: dicoDescr) {
+            return self.nodeHandler.createSceneWithNodeAndLabel(text: dicoDescr, imageName: "logo-epita.png")
+        }
+        return self.nodeHandler.createSceneWithLabel(text: dicoDescr)
+    }
+
+    // Function that will determine if an image need to be added under a label in the scene
+    func checkAddImage(dicoDescr: String) -> Bool {
+        if dicoDescr.lowercased().range(of: "Amphi 4") != nil {
+            return true
+        }
+        return false
     }
 }
