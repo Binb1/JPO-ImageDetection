@@ -17,6 +17,7 @@
 		5E9755F620E4EFEB0086AC4C /* NodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9755F520E4EFEB0086AC4C /* NodeHandler.swift */; };
 		5EECC51A20E507CF00F215C3 /* ImageDictionnary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EECC51920E507CF00F215C3 /* ImageDictionnary.swift */; };
 		5EEEAE7C20ECF470008EC037 /* logo-epita.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEEAE7B20ECF470008EC037 /* logo-epita.png */; };
+		5EEEAE8420ED0A52008EC037 /* objects.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEEAE8320ED0A52008EC037 /* objects.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5E9755F520E4EFEB0086AC4C /* NodeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeHandler.swift; sourceTree = "<group>"; };
 		5EECC51920E507CF00F215C3 /* ImageDictionnary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDictionnary.swift; sourceTree = "<group>"; };
 		5EEEAE7B20ECF470008EC037 /* logo-epita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-epita.png"; sourceTree = "<group>"; };
+		5EEEAE8320ED0A52008EC037 /* objects.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = objects.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E7AF37220ED111100B780C1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5EEEAE7B20ECF470008EC037 /* logo-epita.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		5E9755D320E11CE50086AC4C = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +74,7 @@
 		5E9755DE20E11CE50086AC4C /* ImageDetection-JPO */ = {
 			isa = PBXGroup;
 			children = (
-				5EEEAE7B20ECF470008EC037 /* logo-epita.png */,
+				5E7AF37220ED111100B780C1 /* Images */,
 				5E9755DF20E11CE50086AC4C /* AppDelegate.swift */,
 				5E9755E320E11CE50086AC4C /* ViewController.swift */,
 				5E9755E520E11CE50086AC4C /* Main.storyboard */,
@@ -75,6 +85,7 @@
 				5E9755F520E4EFEB0086AC4C /* NodeHandler.swift */,
 				5EECC51920E507CF00F215C3 /* ImageDictionnary.swift */,
 				5E38530820EBA43F00A1B0EF /* Constants.swift */,
+				5EEEAE8320ED0A52008EC037 /* objects.scnassets */,
 			);
 			path = "ImageDetection-JPO";
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9755EC20E11CE60086AC4C /* LaunchScreen.storyboard in Resources */,
+				5EEEAE8420ED0A52008EC037 /* objects.scnassets in Resources */,
 				5E9755E920E11CE60086AC4C /* Assets.xcassets in Resources */,
 				5EEEAE7C20ECF470008EC037 /* logo-epita.png in Resources */,
 				5E9755E720E11CE50086AC4C /* Main.storyboard in Resources */,
