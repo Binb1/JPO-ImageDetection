@@ -67,7 +67,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 if let dicoDescr = self.imgDictionnary.dictionnary[name] {
                     if !self.nodeHandler.onScreenNodes.contains(dicoDescr) {
                         //Creation of the SKScene, the SKLabelNode and the SCNPlane
-                        skScene = self.nodeHandler.createSceneWithLabel(text: dicoDescr)
+//                        skScene = self.nodeHandler.createSceneWithLabel(text: dicoDescr)
+                        skScene = self.nodeHandler.createSceneWithNodeAndLabel(text: dicoDescr, imageName: "logo-epita.png")
                         
                         //Create a plane on top of the detected image
                         let plane = SCNPlane(width: ref.physicalSize.width,
