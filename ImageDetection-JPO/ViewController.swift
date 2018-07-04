@@ -68,22 +68,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if let name = ref.name {
                 if let dicoDescr = self.imgDictionnary.dictionnary[name] {
                     if !self.nodeHandler.onScreenNodes.contains(dicoDescr) {
-                        //Creation of the SKScene, the SKLabelNode and the SCNPlane
-                        skScene = self.createScene(dicoDescr: dicoDescr)
-                        
-                        //Create a plane on top of the detected image
-                        let plane = SCNPlane(width: ref.physicalSize.width,
-                                             height: ref.physicalSize.height)
-                        let material = SCNMaterial()
-                        material.lightingModel = SCNMaterial.LightingModel.constant
-                        material.isDoubleSided = false
-                        material.diffuse.contents = skScene
-                        plane.materials = [material]
-                        let planeNode = SCNNode(geometry: plane)
-                        planeNode.opacity = 1
-                        planeNode.eulerAngles.x = -.pi / 2
-
-                        node.addChildNode(planeNode)
+                        self.nodeHandler.createSCObject(text: "model.obj", sceneView: self.sceneView)
+//                        //Creation of the SKScene, the SKLabelNode and the SCNPlane
+//                        skScene = self.createScene(dicoDescr: dicoDescr)
+//
+//                        //Create a plane on top of the detected image
+//                        let plane = SCNPlane(width: ref.physicalSize.width,
+//                                             height: ref.physicalSize.height)
+//                        let material = SCNMaterial()
+//                        material.lightingModel = SCNMaterial.LightingModel.constant
+//                        material.isDoubleSided = false
+//                        material.diffuse.contents = skScene
+//                        plane.materials = [material]
+//                        let planeNode = SCNNode(geometry: plane)
+//                        planeNode.opacity = 1
+//                        planeNode.eulerAngles.x = -.pi / 2
+//
+//                        node.addChildNode(planeNode)
                     }
                 }
             }
