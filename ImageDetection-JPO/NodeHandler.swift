@@ -17,6 +17,18 @@ class NodeHandler {
         onScreenNodes = []
     }
     
+    func createSCObject(text: String, sceneView: ARSCNView) {
+        debugPrint("called")
+        guard let paperPlaneScene = SCNScene(named: "objects.scnassets/Mario.scn"),
+        let paperPlaneNode = paperPlaneScene.rootNode.childNode(withName: "mario", recursively: true)
+            else {
+                debugPrint("oh nan")
+                return
+            }
+        paperPlaneNode.position = SCNVector3(0, 0, -0.5)
+        sceneView.scene.rootNode.addChildNode(paperPlaneNode)
+    }
+    
     func createSceneWithLabel(text: String) -> SKScene {
         let skScene = createScene(width: 500, height: 500)
         let point = CGPoint(x: skScene.frame.size.width/2, y: skScene.frame.size.width/2)
