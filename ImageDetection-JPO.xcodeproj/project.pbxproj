@@ -16,6 +16,7 @@
 		5E9755F420E120FD0086AC4C /* ViewController+ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9755F320E120FD0086AC4C /* ViewController+ARSessionDelegate.swift */; };
 		5E9755F620E4EFEB0086AC4C /* NodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9755F520E4EFEB0086AC4C /* NodeHandler.swift */; };
 		5EECC51A20E507CF00F215C3 /* ImageDictionnary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EECC51920E507CF00F215C3 /* ImageDictionnary.swift */; };
+		5EEEAE7C20ECF470008EC037 /* logo-epita.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEEAE7B20ECF470008EC037 /* logo-epita.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5E9755F320E120FD0086AC4C /* ViewController+ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSessionDelegate.swift"; sourceTree = "<group>"; };
 		5E9755F520E4EFEB0086AC4C /* NodeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeHandler.swift; sourceTree = "<group>"; };
 		5EECC51920E507CF00F215C3 /* ImageDictionnary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDictionnary.swift; sourceTree = "<group>"; };
+		5EEEAE7B20ECF470008EC037 /* logo-epita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-epita.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		5E9755DE20E11CE50086AC4C /* ImageDetection-JPO */ = {
 			isa = PBXGroup;
 			children = (
+				5EEEAE7B20ECF470008EC037 /* logo-epita.png */,
 				5E9755DF20E11CE50086AC4C /* AppDelegate.swift */,
 				5E9755E320E11CE50086AC4C /* ViewController.swift */,
 				5E9755E520E11CE50086AC4C /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			files = (
 				5E9755EC20E11CE60086AC4C /* LaunchScreen.storyboard in Resources */,
 				5E9755E920E11CE60086AC4C /* Assets.xcassets in Resources */,
+				5EEEAE7C20ECF470008EC037 /* logo-epita.png in Resources */,
 				5E9755E720E11CE50086AC4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
