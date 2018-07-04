@@ -20,7 +20,23 @@ class NodeHandler {
     func createSceneWithLabel(text: String) -> SKScene {
         let skScene = createScene(width: 500, height: 500)
         let point = CGPoint(x: skScene.frame.size.width/2, y: skScene.frame.size.width/2)
-        skScene.addChild(createSpriteNode(position: point))
+        skScene.addChild(createLabelNode(position: point, text: text))
+        return skScene;
+    }
+    
+    func createSceneWithNode(imageName: String) -> SKScene {
+        let skScene = createScene(width: 500, height: 500)
+        let point = CGPoint(x: skScene.frame.size.width/2, y: skScene.frame.size.width/2)
+        skScene.addChild(createSpriteNode(position: point, imageName: imageName))
+        return skScene;
+    }
+    
+    func createSceneWithNodeAndLabel(text: String, imageName: String) -> SKScene {
+        let skScene = createScene(width: 500, height: 500)
+        var point = CGPoint(x: skScene.frame.size.width/2, y: skScene.frame.size.width/1.8)
+        skScene.addChild(createSpriteNode(position: point, imageName: imageName))
+        point = CGPoint(x: skScene.frame.size.width/2, y: skScene.frame.size.width/5)
+        skScene.addChild(createLabelNode(position: point, text: text))
         return skScene;
     }
     
@@ -29,6 +45,7 @@ class NodeHandler {
         skScene.backgroundColor = SKColor(white:0,alpha:0)
         return skScene
     }
+
     
     func createLabelNode(position: CGPoint, text: String) -> SKLabelNode {
         //Creating the SKLabelNode
@@ -52,8 +69,8 @@ class NodeHandler {
         return label
     }
     
-    func createSpriteNode(position: CGPoint) -> SKSpriteNode {
-        let spriteNode = SKSpriteNode(imageNamed: "logo-epita.png")
+    func createSpriteNode(position: CGPoint, imageName: String) -> SKSpriteNode {
+        let spriteNode = SKSpriteNode(imageNamed: imageName)
         spriteNode.position = CGPoint(x: position.x, y: position.y)
         spriteNode.zRotation = .pi
         spriteNode.xScale *= -1
