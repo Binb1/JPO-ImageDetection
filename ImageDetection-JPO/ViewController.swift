@@ -17,7 +17,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     
-    let nodeHandler = NodeHandler()
+    let scenaryHandler = ScenaryHandler()
     let imgDictionnary = ImageDictionnary()
     
     let updateQueue = DispatchQueue(label: Bundle.main.bundleIdentifier! +
@@ -61,50 +61,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let ref = imageAnchor.referenceImage
         updateQueue.async {
-            
-            //Initialize an SKScene to add 2D text to the SCScene
-            var skScene: SKScene!
             //Triple check to see if the SKScene and the node can be created
             if let name = ref.name {
                 if let dicoDescr = self.imgDictionnary.dictionnary[name] {
-                    if !self.nodeHandler.onScreenNodes.contains(dicoDescr) {
-                        self.nodeHandler.createSCObject(text: "model.obj", sceneView: self.sceneView)
-//                        //Creation of the SKScene, the SKLabelNode and the SCNPlane
-//                        skScene = self.createScene(dicoDescr: dicoDescr)
-//
-//                        //Create a plane on top of the detected image
-//                        let plane = SCNPlane(width: ref.physicalSize.width,
-//                                             height: ref.physicalSize.height)
-//                        let material = SCNMaterial()
-//                        material.lightingModel = SCNMaterial.LightingModel.constant
-//                        material.isDoubleSided = false
-//                        material.diffuse.contents = skScene
-//                        plane.materials = [material]
-//                        let planeNode = SCNNode(geometry: plane)
-//                        planeNode.opacity = 1
-//                        planeNode.eulerAngles.x = -.pi / 2
-//
-//                        node.addChildNode(planeNode)
+                    if !self.scenaryHandler.nodeHandler.onScreenNodes.contains(dicoDescr) {
+                        self.scenaryHandler.runScenary(objectName: dicoDescr, sceneView: self.sceneView, ref: ref, node: node)
+                        
                     }
                 }
             }
         }
-    }
-    
-    // Function that will call the NodeHandler function to create the perfect scene
-    // depending on the image recognised
-    func createScene(dicoDescr: String) -> SKScene {
-        if checkAddImage(dicoDescr: dicoDescr) {
-            return self.nodeHandler.createSceneWithNodeAndLabel(text: dicoDescr, imageName: "logo-epita.png")
-        }
-        return self.nodeHandler.createSceneWithLabel(text: dicoDescr)
-    }
-
-    // Function that will determine if an image need to be added under a label in the scene
-    func checkAddImage(dicoDescr: String) -> Bool {
-        if dicoDescr.lowercased().range(of: "Amphi 4") != nil {
-            return true
-        }
-        return false
     }
 }
