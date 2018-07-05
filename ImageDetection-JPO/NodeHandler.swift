@@ -8,6 +8,7 @@
 
 import Foundation
 import ARKit
+import SceneKit
 
 class NodeHandler {
     
@@ -17,15 +18,70 @@ class NodeHandler {
         onScreenNodes = []
     }
     
-    func createSCObject(text: String, sceneView: ARSCNView) {
+    func createSCObject(name: String, rootname: String, sceneView: ARSCNView) {
         debugPrint("called")
-        guard let paperPlaneScene = SCNScene(named: "objects.scnassets/Mario.scn"),
-        let paperPlaneNode = paperPlaneScene.rootNode.childNode(withName: "mario", recursively: true)
+        guard let paperPlaneScene = SCNScene(named: name),
+        let paperPlaneNode = paperPlaneScene.rootNode.childNode(withName: rootname, recursively: true)
+            else {
+                debugPrint("oh nan -> " + rootname)
+                return
+            }
+        
+        //First droite gauche
+        //Second -> z vers le haut
+        //Third -> Profondeur
+        paperPlaneNode.position = SCNVector3(0, 2, -5.5)
+        let moveDown = SCNAction.move(by: SCNVector3(0, -0.1, 0), duration: 1)
+        let moveUp = SCNAction.move(by: SCNVector3(0,0.1,0), duration: 1)
+        let waitAction = SCNAction.wait(duration: 0.25)
+        let hoverSequence = SCNAction.sequence([moveUp,waitAction,moveDown])
+        let loopSequence = SCNAction.repeatForever(hoverSequence)
+        paperPlaneNode.runAction(loopSequence)
+        sceneView.scene.rootNode.addChildNode(paperPlaneNode)
+    }
+    
+    func animateObject(object: SCNNode, objectName: String) {
+        if objectName == "XWing" {
+            let goStraight = SCNAction.move(by: SCNVector3(0, 0, -10), duration: 1)
+            let spin = SCNAction.rotate(by: .pi*2, around: SCNVector3(0, 0, 1), duration: 1)
+            let spinLooping = SCNAction.rotate(by: .pi, around: SCNVector3(1, 0, 0), duration: 1)
+            let goUp = SCNAction.move(by: SCNVector3(0, 8, 0), duration: 1)
+            let goDown = SCNAction.move(by: SCNVector3(0, -8, 0), duration: 1)
+            let goBack = SCNAction.move(by: SCNVector3(0, 0, 8), duration: 1)
+
+            let groupFirst = SCNAction.group([goStraight, spin])
+            let groupSecond = SCNAction.group([spinLooping, goUp])
+            let groupThird = SCNAction.group([goBack, spin])
+            let groupFourth = SCNAction.group([spinLooping, goDown])
+         
+            let hoverSequence = SCNAction.sequence([groupFirst, groupSecond, groupThird, groupFourth])
+            
+            let loopSequence = SCNAction.repeatForever(hoverSequence)
+            object.runAction(loopSequence)
+        } else if objectName == "FloatingIsland" {
+            let moveDown = SCNAction.move(by: SCNVector3(0, -0.2, 0), duration: 1)
+            let moveUp = SCNAction.move(by: SCNVector3(0,0.1,0), duration: 1)
+            let waitAction = SCNAction.wait(duration: 0.30)
+            let hoverSequence = SCNAction.sequence([moveUp,waitAction,moveDown])
+            let loopSequence = SCNAction.repeatForever(hoverSequence)
+            object.runAction(loopSequence)
+        }
+    }
+    
+    func createSCObjectWithVector(name: String, rootname: String, sceneView: ARSCNView, vect: SCNVector3) {
+        debugPrint("called")
+        guard let paperPlaneScene = SCNScene(named: name),
+            let paperPlaneNode = paperPlaneScene.rootNode.childNode(withName: rootname, recursively: true)
             else {
                 debugPrint("oh nan")
                 return
-            }
-        paperPlaneNode.position = SCNVector3(0, 0, -0.5)
+        }
+        
+        //First droite gauche
+        //Second -> z vers le haut
+        //Third -> Profondeur
+        paperPlaneNode.position = vect
+        animateObject(object: paperPlaneNode, objectName: rootname)
         sceneView.scene.rootNode.addChildNode(paperPlaneNode)
     }
     
