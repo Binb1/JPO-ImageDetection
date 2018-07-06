@@ -28,5 +28,11 @@ The final project is to realize and interactive application in the context of vi
 ## Team
 <img src="https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/3IE.png" alt="3IE" width="100"> [3IE](https://www.3ie.fr): The project is realized at 3IE, the Institute of IT Innovation of Epita.
 
+## Credits
+
+- Thanks to Alberto Calvo for the [XWing model](https://poly.google.com/view/d6Xadlg51aC)
+- Thanks to Corey Daniels for the [Floating Islands](https://poly.google.com/view/1tmAsnTMZnw)
+- Thanks to Smashicons for the camera logo
+
 
 
