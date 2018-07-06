@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a ><img src="https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/JPO-ImageDetection.png" alt="Polyword" width="200"></a>
+  <a ><img src="https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/Icon.png" alt="Polyword" width="200"></a>
   <br><br>
   ImageDetection-JPO
   <br><br>
@@ -9,6 +9,16 @@
 ## Description
 
 The idea of this project is to detect certain objects/scene in real life, and to add ARKit elements on top of them.
+
+## Demo
+
+A small demo of what it looks like:
+
+- A XWing and an animation are added when the bottom of the mac is detected
+- Three floating islands are added when the board in the background is detected
+
+![screenshot](https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/demo.gif)
+
 
 ## Context
 
