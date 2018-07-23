@@ -65,7 +65,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if let name = ref.name {
                 if let dicoDescr = self.imgDictionnary.dictionnary[name] {
                     if !self.scenaryHandler.nodeHandler.onScreenNodes.contains(dicoDescr) {
-                        self.scenaryHandler.runScenary(objectName: dicoDescr, sceneView: self.sceneView, ref: ref, node: node)
+                        self.scenaryHandler.runScenaryCoursPasteur(objectName: dicoDescr, sceneView: self.sceneView, ref: ref, node: node)
                         
                     }
                 }
