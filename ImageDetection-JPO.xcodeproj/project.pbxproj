@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5E38530920EBA43F00A1B0EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38530820EBA43F00A1B0EF /* Constants.swift */; };
+		5E39FC5621060BB700F6E610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E39FC5521060BB600F6E610 /* Assets.xcassets */; };
 		5E846E5120EE1CC7005770A2 /* ScenaryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E846E5020EE1CC7005770A2 /* ScenaryHandler.swift */; };
 		5E9755E020E11CE50086AC4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9755DF20E11CE50086AC4C /* AppDelegate.swift */; };
 		5E9755E420E11CE50086AC4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9755E320E11CE50086AC4C /* ViewController.swift */; };
 		5E9755E720E11CE50086AC4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9755E520E11CE50086AC4C /* Main.storyboard */; };
-		5E9755E920E11CE60086AC4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9755E820E11CE60086AC4C /* Assets.xcassets */; };
 		5E9755EC20E11CE60086AC4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9755EA20E11CE60086AC4C /* LaunchScreen.storyboard */; };
 		5E9755F420E120FD0086AC4C /* ViewController+ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9755F320E120FD0086AC4C /* ViewController+ARSessionDelegate.swift */; };
 		5E9755F620E4EFEB0086AC4C /* NodeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9755F520E4EFEB0086AC4C /* NodeHandler.swift */; };
@@ -23,12 +23,12 @@
 
 /* Begin PBXFileReference section */
 		5E38530820EBA43F00A1B0EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5E39FC5521060BB600F6E610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E846E5020EE1CC7005770A2 /* ScenaryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenaryHandler.swift; sourceTree = "<group>"; };
 		5E9755DC20E11CE50086AC4C /* ImageDetection-JPO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ImageDetection-JPO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9755DF20E11CE50086AC4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E9755E320E11CE50086AC4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E9755E620E11CE50086AC4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5E9755E820E11CE60086AC4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E9755EB20E11CE60086AC4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E9755ED20E11CE60086AC4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9755F320E120FD0086AC4C /* ViewController+ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSessionDelegate.swift"; sourceTree = "<group>"; };
@@ -80,8 +80,8 @@
 				5E9755DF20E11CE50086AC4C /* AppDelegate.swift */,
 				5E9755E320E11CE50086AC4C /* ViewController.swift */,
 				5E9755E520E11CE50086AC4C /* Main.storyboard */,
-				5E9755E820E11CE60086AC4C /* Assets.xcassets */,
 				5E9755EA20E11CE60086AC4C /* LaunchScreen.storyboard */,
+				5E39FC5521060BB600F6E610 /* Assets.xcassets */,
 				5E9755ED20E11CE60086AC4C /* Info.plist */,
 				5E9755F320E120FD0086AC4C /* ViewController+ARSessionDelegate.swift */,
 				5E846E5020EE1CC7005770A2 /* ScenaryHandler.swift */,
@@ -153,9 +153,9 @@
 			files = (
 				5E9755EC20E11CE60086AC4C /* LaunchScreen.storyboard in Resources */,
 				5EEEAE8420ED0A52008EC037 /* objects.scnassets in Resources */,
-				5E9755E920E11CE60086AC4C /* Assets.xcassets in Resources */,
 				5EEEAE7C20ECF470008EC037 /* logo-epita.png in Resources */,
 				5E9755E720E11CE50086AC4C /* Main.storyboard in Resources */,
+				5E39FC5621060BB700F6E610 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

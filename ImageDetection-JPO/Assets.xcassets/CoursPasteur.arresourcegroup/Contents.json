@@ -1,0 +1,95 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "Amphi-4.arreferenceimage"
+    },
+    {
+      "filename" : "Amphi-41.arreferenceimage"
+    },
+    {
+      "filename" : "Amphi-42.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X1.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X2.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X3.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X5.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X6.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X7.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X8.arreferenceimage"
+    },
+    {
+      "filename" : "Batiment-X9.arreferenceimage"
+    },
+    {
+      "filename" : "Cafetteria0.arreferenceimage"
+    },
+    {
+      "filename" : "Cafetteria1.arreferenceimage"
+    },
+    {
+      "filename" : "Cafetteria2.arreferenceimage"
+    },
+    {
+      "filename" : "Cafetteria3.arreferenceimage"
+    },
+    {
+      "filename" : "Cafetteria4.arreferenceimage"
+    },
+    {
+      "filename" : "Falcon.arreferenceimage"
+    },
+    {
+      "filename" : "Falcon1.arreferenceimage"
+    },
+    {
+      "filename" : "Falcon3.arreferenceimage"
+    },
+    {
+      "filename" : "Falcon4.arreferenceimage"
+    },
+    {
+      "filename" : "Falcon5.arreferenceimage"
+    },
+    {
+      "filename" : "Falcon6.arreferenceimage"
+    },
+    {
+      "filename" : "Falcon7.arreferenceimage"
+    },
+    {
+      "filename" : "LSE-LRDE1.arreferenceimage"
+    },
+    {
+      "filename" : "LSE-LRDE3.arreferenceimage"
+    },
+    {
+      "filename" : "LSE-LRDE4.arreferenceimage"
+    },
+    {
+      "filename" : "Under1.arreferenceimage"
+    },
+    {
+      "filename" : "Under2.arreferenceimage"
+    }
+  ]
+}
