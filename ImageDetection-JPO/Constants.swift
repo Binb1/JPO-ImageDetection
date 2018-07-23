@@ -12,7 +12,7 @@ public class Constants {
 
     struct ARReference {
 
-        static var folderName = "WorldCup"
+        static let folderName = "CoursPasteur"
 
     }
 
