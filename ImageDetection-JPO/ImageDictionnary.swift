@@ -31,12 +31,20 @@ class ImageDictionnary {
     }
     
     func configDisplayName(xcodeName: String) -> String {
-        if xcodeName.lowercased().range(of:"under") != nil {
+        if xcodeName.lowercased().range(of: "under") != nil {
             return "Under"
-        } else if xcodeName.lowercased().range(of:"amphi4") != nil {
+        } else if xcodeName.lowercased().range(of: "amphi-4") != nil {
             return "Amphi 4"
-        } else if xcodeName.lowercased().range(of:"worldcup") != nil {
+        } else if xcodeName.lowercased().range(of: "worldcup") != nil {
             return "🇫🇷🏆"
+        } else if xcodeName.lowercased().range(of: "cafetteria") != nil {
+            return "Cafetteria 🍔"
+        } else if xcodeName.lowercased().range(of: "batiment-x") != nil {
+            return "Batiment X"
+        } else if xcodeName.lowercased().range(of: "falcon") != nil {
+            return "Falcon"
+        } else if xcodeName.lowercased().range(of: "lse-lrde") != nil {
+            return "LSE-LRDE"
         } else {
             return xcodeName
         }
