@@ -36,10 +36,10 @@ class ScenaryHandler {
     
     func runScenaryCoursPasteur(objectName: String, sceneView: ARSCNView, ref: ARReferenceImage, node: SCNNode) {
         if objectName.lowercased().range(of:"under") != nil {
-            let vect = SCNVector3(1, 0, -5.5)
+            let vect = SCNVector3(0, 0, 4.5)
             nodeHandler.createSCObjectWithVector(name: "objects.scnassets/Creeper.scn", rootname: "Creeper", sceneView: sceneView, vect: vect)
         } else if objectName.lowercased().range(of:"falcon") != nil {
-            let vect = SCNVector3(1, 0, -5.5)
+            let vect = SCNVector3(0, 4, 3.5)
             nodeHandler.createSCObjectWithVector(name: "objects.scnassets/XWing.scn", rootname: "XWing", sceneView: sceneView, vect: vect)
         } else {
             addSKScene(dicoDescr: objectName, ref: ref, node: node)
