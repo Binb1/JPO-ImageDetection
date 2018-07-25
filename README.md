@@ -10,14 +10,26 @@
 
 The idea of this project is to detect certain objects/scene in real life, and to add ARKit elements on top of them.
 
+## Project organisation
+
+This project is organized so that somebody can use the project without understanding every part of the code.
+The main files are:
+  - A NodeHandler class, which is the class used to display every AR elements
+  - A ViewController class, which is the central point of the project, it is also used for the image detection
+  - A ScenaryHandler class, which is used to define a precise scenary for every environnement.
+  - A Constant file, which is used to store every constants in the project
+
+![screenshot](https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/project.png)
+
 ## Demo
 
 A small demo of what it looks like:
 
-- A XWing and an animation are added when the bottom of the mac is detected
-- Three floating islands are added when the board in the background is detected
+- A XWing and an animation are added when a specific building is detected
+- The names of some buildings are added when they are detected
 
-![screenshot](https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/demo.gif)
+![screenshot](https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/demo00.gif)
+![screenshot](https://raw.githubusercontent.com/Binb1/JPO-ImageDetection/master/Ressources/demo01.gif)
 
 
 ## Context
